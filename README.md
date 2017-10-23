@@ -1,10 +1,10 @@
-# evry/oidc-proxy [![Image Layers](https://images.microbadger.com/badges/image/evry/oidc-proxy.svg)](https://microbadger.com/#/images/evry/oidc-proxy)
+# oidc-proxy [![Image Layers](https://images.microbadger.com/badges/image/evry/oidc-proxy.svg)](https://microbadger.com/#/images/evry/oidc-proxy)
 
-Docker Image for OpenID Connect proxy authentication. Useful for putting
-services behind Keycloak and other OpenID Connect authentication.
+Docker Image for OpenID Connect proxy authentication. Useful for putting services behind Keycloak and other OpenID 
+Connect authentication.
 
-This is Image used Nginx for proxying request and OpenResty with the
-`lua-resty-openidc` library to handle OpenID Connect authentication.
+This is Image used Nginx for proxying request and OpenResty with the `lua-resty-openidc` library to handle OpenID 
+Connect authentication.
 
 !["Docker OIDC Proxy overview"](https://raw.githubusercontent.com/evry/docker-oidc-proxy/master/assets/overview.png "Docker OIDC Proxy overview")
 
@@ -27,9 +27,11 @@ environment variables is used in this image:
 * `OID_CLIENT_ID`: OpenID Client ID
 * `OID_CLIENT_SECRET`: OpenID Client Secret
 
+### The service to proxy!
+
 * `PROXY_HOST`: Host name of the service to proxy
 * `PROXY_PORT`: Port of the service to proxy
-* `PROXY_PROTOCOL`: Protofol to the service to proxy (`http` or `https`)
+* `PROXY_PROTOCOL`: Protocol to the service to proxy (`http` or `https`)
 
 ```
 docker run \
@@ -86,3 +88,8 @@ issue](https://github.com/evry/docker-oidc-proxy/issues), especially for more
 ambitious contributions. This gives other contributors a chance to point you in
 the right direction, give you feedback on your design, and help you find out if
 someone else is working on the same thing.
+
+## TODO
+
+- [ ] figure out which header to set when sending to nexus so, it knows its authenticated user
+- [ ] 
