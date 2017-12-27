@@ -8,6 +8,8 @@ local opts = {
     iat_slack = 600,
 }
 
+local session = require("resty.session").start()
+
 -- call authenticate for OpenID Connect user authentication
 local res, err = require("resty.openidc").authenticate(opts)
 
@@ -18,3 +20,5 @@ if err then
     ngx.say("There was an error while logging in: " .. err)
     ngx.exit(ngx.HTTP_INTERNAL_SERVER_ERROR)
 end
+
+ngx.var.id_token = session.data.enc_id_token
