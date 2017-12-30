@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenID Connect Information</title>
+</head>
+<body>
+  <div>
+    <pre>
+
+    Here is your OpenID Connect information:
+
+      client_id: {{openid.client_id}}
+      issuer: {{openid.issuer}}
+      user: {{openid.user}}
+      email: {{openid.email}}
+      id_token: {{openid.id_token}}
+<!--
+      {# Usually you wouldn't want to expose your client_secret or refresh_token #}
+      client_secret: {# openid.client_secret #}
+      refresh_token: {# openid.refresh_token #}
+-->
+
+    [<a href="/logout">Log out</a>]
+
+    </pre>
+  </div>
+</body>
+</html>
